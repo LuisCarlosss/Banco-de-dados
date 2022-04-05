@@ -1,2 +1,2 @@
 # Banco-de-dados
-Sistema para guarda informação dos clientes
+Sistema para armazenar informação dos clientes
