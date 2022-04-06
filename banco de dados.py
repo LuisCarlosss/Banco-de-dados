@@ -12,8 +12,18 @@ def criar():
     with open(namefile,'w') as file:
         file.close()
         print('Arquivo criado!')
+      
+#Função para Mostra os arquivos
 
-#Escrever na ficha 
+def mostrar():
+    import os 
+
+    file = os.listdir()
+    for arquivos in file:
+        if '.txt' in arquivos:
+            print(arquivos)
+
+#Função para Escrever na ficha 
 
 def escrever():
     import os 
@@ -38,17 +48,6 @@ def escrever():
             file.write(f'{texto} \n')
         with open(txt,'r') as file:
             print(file.read())
-
-
-def mostrar():
-    import os 
-
-    file = os.listdir()
-    for arquivos in file:
-        if '.txt' in arquivos:
-            print(arquivos)
-
-
 
 #Mostrar as opções 
 
@@ -84,4 +83,6 @@ while True:
         elif opção == 3:
             print('Saindo...')
             break
+
+
 
