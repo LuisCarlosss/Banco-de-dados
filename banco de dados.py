@@ -1,16 +1,10 @@
 
-#Funções 
-
-
-
-
-
-
-from codecs import utf_16_be_encode
-
+#Funções
 
 def li():
     print('='*20)
+    
+#Função para criar uma ficha
 
 def criar():
     #Criar ficha
@@ -20,8 +14,9 @@ def criar():
         file.close()
         print('Arquivo criado!')
 
+#Escrever na ficha 
+
 def mostra_escrever():
-    
     import os 
 
     
@@ -49,6 +44,7 @@ def mostra_escrever():
 
 
 #Mostrar as opções 
+
 while True:
     print('Banco de dados')
     li()
