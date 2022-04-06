@@ -1,4 +1,3 @@
-
 #Funções
 
 def li():
@@ -7,7 +6,7 @@ def li():
 #Função para criar uma ficha
 
 def criar():
-    #Criar ficha
+    #Criar ficha 
     nome = input('Digite seu nome: ')
     namefile = nome + '.txt'
     with open(namefile,'w') as file:
@@ -16,7 +15,7 @@ def criar():
 
 #Escrever na ficha 
 
-def mostra_escrever():
+def escrever():
     import os 
 
     
@@ -39,7 +38,15 @@ def mostra_escrever():
             file.write(f'{texto} \n')
         with open(txt,'r') as file:
             print(file.read())
-    
+
+
+def mostrar():
+    import os 
+
+    file = os.listdir()
+    for arquivos in file:
+        if '.txt' in arquivos:
+            print(arquivos)
 
 
 
@@ -50,15 +57,16 @@ while True:
     li()
     print('''
     [0] Criar novo Ficha
-    [1] Mostra e Escrver no seu Ficha
-    [2] Sair 
+    [1] Mostra ficha
+    [2] Escrver no seu Ficha
+    [3] Sair
     ''')
     li()
 
     try:
         opção = int(input('Escolha: '))
     except ValueError:
-        print('Digite um dos números das opções! ')
+        print('Erro : Digite um dos números das opções! ')
         print('Tente novamente!')
         continue
     except Exception as erro:
@@ -69,9 +77,11 @@ while True:
             criar()
             continue
         elif opção == 1:
-            mostra_escrever()
-            continue
+            mostrar()
         elif opção == 2:
+            escrever()
+            continue
+        elif opção == 3:
             print('Saindo...')
             break
 
