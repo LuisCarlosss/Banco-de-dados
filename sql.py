@@ -8,7 +8,7 @@ def verificar():
     
     try:
         with open(arquivo) as file:
-            pass  
+            file.close()
 
     except FileNotFoundError:
         print('Arquivo não encontrado!')
@@ -23,7 +23,7 @@ def verificar():
     #Criar o arquivo
     def criar():
         with open(arquivo,'w')as file:
-            pass
+            file.close()
     criar()
 
     #Mostar os arquivos 
@@ -45,6 +45,7 @@ def escrever():
     print('Escolha o arquivo')
     namefile = input(':')
     arquivo = namefile + '.txt'
+    
     import os 
     file = os.listdir()
     if arquivo in file:
